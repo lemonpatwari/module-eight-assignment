@@ -8,7 +8,6 @@ const message = ref('Lorem ipsum dolor sit amet, consectetur adipisicing elit. I
 const emittedMessage = ref('');
 
 const handleMessage = (message) => {
-  console.log(message);
   emittedMessage.value = message;
 };
 
@@ -16,8 +15,8 @@ const handleMessage = (message) => {
 
 <template>
   <h1>ParentComponent</h1>
-  <h1>{{ emittedMessage }}</h1>
-  <ChildComponent @messageEmitted="handleMessage" :message="message"/>
+  <h1 class="font-bold text-lg">{{ emittedMessage }}</h1>
+  <ChildComponent class="" @messageEmitted="handleMessage" :message="message"/>
 </template>
 
 <style scoped>
